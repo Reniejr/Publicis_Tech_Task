@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.5 (2021-05-17)
+
+
+### Features
+
+* final version ([469985f](https://github.com/Reniejr/Publicis_Tech_Task/commit/469985f67e1fd8ab8fcb2b33307843e4a7788833))
+
 ### [0.1.4](https://gitlab.com/publicis-sapient-jagaad/tests/js_react_renie-jr-delis/compare/v0.1.3...v0.1.4) (2021-05-14)
 
 
