@@ -1,0 +1,107 @@
+@import '../../styles/main.scss';
+#navbar{
+    @include flexBox(row, space-between, center);
+    width: 100%;
+    height: 90px;
+    color: white;
+    font-weight:600;
+    text-transform: uppercase;
+    .logo{
+        svg{
+            height: 100px;
+            fill: white;
+        }
+    }
+    #nav-hamburger{
+        display: none;
+    }
+    .nav-menu{
+        @include flexBox(row, none, center);
+        ul, .nav-socials{
+            @include flexBox(row, none, center);
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            font-size: 21px;
+            li{
+                margin-right: 80px;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    margin: 0;
+                }
+            }
+        }
+        .nav-socials{
+            width: 268px;
+            height: 59px;
+            background-color: $secondary;
+            p{
+                margin: 0;
+            }
+            .lang{
+                padding: 19px 24px 20px 24px;
+                border-right: 1px solid $secondary_border;
+                font-size: 21px;
+                line-height: 19.5px;
+            }
+            .socials{
+                width: 100%;
+                @include flexBox(row, space-between, center);
+                padding: 19px 24px;
+                svg{
+                    width: 21px;
+                    height: 21px;
+                    fill: white;
+                }
+            }
+        }
+    }
+    .collapse-menu{
+        @include transitions(all .3s ease);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $primary_shade;
+        z-index: 10;
+        ul{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            list-style: none;
+            li{
+                padding: 20px;
+                text-align: center;
+                border-bottom: 1px solid rgba($color: $border_color, $alpha: 0.2);
+                cursor: pointer;
+                &:hover{
+                    background-color: rgba($color: $border_color, $alpha: 0.2);
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                &:nth-of-type(1){
+                    text-align: right;
+                    button{
+                        padding: 2px 10px;
+                        color: white;
+                        font-weight: 600;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                &:nth-last-of-type(1){
+                    background-color: $secondary;
+                    &:hover{
+                        filter: brightness(1.2);
+                        -webkit-filter: brightness(1.2);
+                    }
+                }
+            }
+        }
+    }
+}

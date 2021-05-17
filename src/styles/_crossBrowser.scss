@@ -1,0 +1,28 @@
+@mixin transforms($properties...){
+    transform: $properties;
+    -webkit-transform: $properties;
+    -moz-transform: $properties;
+    -ms-transform: $properties;
+    -o-transform: $properties;
+}
+
+@mixin transitions($properties...){
+    transition: $properties;
+    -webkit-transition: $properties;
+    -moz-transition: $properties;
+    -ms-transition: $properties;
+    -o-transition: $properties;
+}
+
+@mixin borderRadius($radius){
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+@mixin animations($animations...){
+    animation: $animations;
+    -webkit-animation: $animations;
+}

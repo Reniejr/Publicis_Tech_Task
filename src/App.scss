@@ -1,0 +1,521 @@
+@import './styles/main';
+$desktop-xl: 1919px;
+$desktop-lg: 1600px;
+$desktop-md: 1400px;
+$desktop-sm: 1200px;
+$tablet-xl: 1000px;
+$tablet: 850px;
+$mobile-xl: 600px;
+$mobile-sm: 400px;
+
+    @media screen and (max-width: $desktop-xl){
+        #navbar{
+            .nav-menu{
+                ul{
+                    li{
+                        margin-right: 4rem;
+                    }
+                }
+            }
+        }
+        #main-page{
+            .row{
+                .event-card{
+                    width: 48%;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                    height: 35.375rem;
+                    margin-bottom: 122px;
+                    &:nth-last-of-type(1), &:nth-last-of-type(2){
+                        margin-bottom: 110px;
+                    }
+                    .cover{
+                        height: 85%;
+                    }
+                }
+            }
+        }
+    }
+
+        @media screen and (max-width: $desktop-lg){
+            #navbar{
+                .nav-menu{
+                    ul{
+                        font-size: 1.1rem;
+                    }
+                    .nav-socials{
+                        width: auto;
+                        .lang{
+                            padding: 10px 15px;
+                        }
+                        .socials{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            #main-page{
+                .page-filters{
+                    .filters{
+                        form{
+                            width: 25rem;
+                        }
+                    }
+                }
+                .row{
+                    .event-card{
+                        height: 30rem;
+                        margin-bottom: 5rem;
+                        &:nth-last-of-type(1), &:nth-last-of-type(2){
+                            margin-bottom: 4rem;
+                        }
+                        .card-details{
+                            margin-top: 1.5rem;
+                        }
+                    }
+                }
+            }
+            #main-footer{
+                .main-container{
+                    .sub-container{
+                        padding: 80px 40px;
+                        &:nth-of-type(2){
+                            padding-top: 100px;
+                        }
+                        &:nth-last-of-type(1){
+                            h3{
+                                width: auto;
+                                font-size: 1.7rem;
+                            }
+                            .newsletter{
+                                span{
+                                    font-size: 1.3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: $desktop-md){
+            #main-header{
+                height: 40rem;
+                padding: 30px;
+                .title{
+                    width: 70%;
+                    h1{
+                        font-size: 5rem;
+                    }
+                    .sub-title{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+            #main-page{
+                #card-slider{
+                    padding: 120px 60px;
+                    .description{
+                        h2{
+                            font-size: 2.5rem;
+                        }
+                        p{
+                            font-size: 1.5rem;
+                        }
+                        button{right: 0;}
+                    }
+                    .slider{
+                        width: 100%;
+                        padding: 0;
+                        .slide-container{
+                            width: 500%;
+                            height: 550px;
+                            .slide{
+                                width: 20%;
+                                margin-right: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+                .row{
+                    .event-card{
+                        height: 25rem;
+                        .card-details{
+                            h3{
+                                font-size: 1.5rem;
+                            }
+                            span{
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            #main-footer{
+                .main-container{
+                    .sub-container{
+                        padding: 80px 40px;
+                        &:nth-of-type(1), 
+                        &:nth-of-type(2){
+                            width: 30%;
+                        }
+                        &:nth-of-type(2){
+                            padding-left: 0;
+                        }
+                        &:nth-last-of-type(1){
+                            width: 40%;
+                            h3{
+                                width: auto;
+                                font-size: 1.7rem;
+                            }
+                            .newsletter{
+                                span{
+                                    font-size: 1.3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: $desktop-sm){
+            #navbar{
+                .nav-menu{
+                    ul{
+                        li{
+                            margin-right: 1.5rem;
+                        }
+                    }
+                }
+            }
+            #main-page{
+                .page-filters{
+                    .filters{
+                        form{
+                            width: 20rem;
+                        }
+                    }
+                }
+            }
+            #main-footer{
+                .main-container{
+                    display: block;
+                    height: auto;
+                    .sub-container{
+                        display: inline-block;
+                        padding: 80px 40px;
+                        &:nth-of-type(1), 
+                        &:nth-of-type(2){
+                            width: 50%;
+                            height: 450px;
+                            float: left;
+                        }
+                        &:nth-of-type(2){
+                            @include flexBox(column, none, center);
+                            p{
+                                width: 60%;
+                                margin-bottom: 0;
+                            }
+                        }
+                        &:nth-last-of-type(1){
+                            width: 100%;
+                            padding: 50px 30px;
+                            h3{
+                                width: auto;
+                                font-size: 1.7rem;
+                            }
+                            .form-container{
+                                .send-form{
+                                    label.terms{
+                                        margin-bottom: 0;
+                                    }
+                                }
+                                @include flexBox(row, space-between, center);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: $tablet-xl){
+            #main-header{
+                height: 30rem;
+                .title{
+                    width: 70%;
+                    bottom: 50px;
+                    left: 60px;
+                    h1{
+                        font-size: 4.5rem;
+                        margin-bottom: 1.2rem;
+                    }
+                    .sub-title{
+                        font-size: 1.5rem;
+                    }
+                }
+                #navbar{
+                    .nav-menu{
+                        ul{
+                            font-size: 1rem;
+                        }
+                    }
+                    .logo{
+                        svg{
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+            #main-page{
+                padding: 100px 50px;
+                .page-filters{
+                    .filters{
+                        form{
+                            width: 18rem;
+                            &:nth-of-type(1){
+                                margin-right: 4rem;
+                            }
+                            label{
+                                font-size: 1.5rem;
+                            }
+                            select{
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+                #card-slider{
+                    padding: 80px;
+                    .description{
+                        margin-bottom: 40px;
+                        h2{
+                            font-size: 2rem;
+                        }
+                        p{
+                            font-size: 1rem;
+                            line-height: 1.5rem;
+                        }
+                    }
+                    .slider{
+                        .slide-container{
+                            height: 400px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .controllers{
+                        .indicator{
+                            width: 40px;
+                            height: 40px;
+                            .square{
+                                width: 12px;
+                                height: 12px;
+                            }
+                        }
+                    }
+                }
+                .row{
+                    .event-card{
+                        height: 20rem;
+                        .card-details{
+                            margin-top: 1rem;
+                            h3{
+                                font-size: 1.3rem;
+                            }
+                            span{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            #main-footer{
+                .main-container{
+                    .sub-container{
+                        &:nth-of-type(1), &:nth-of-type(2){
+                            width: 100%;
+                            @include flexBox(column, none, center);
+                        }
+                        &:nth-of-type(2){
+                            padding: 0;
+                            height: 350px;
+                            p{
+                                width: 200px;
+                            };
+                        }
+                        &:nth-last-of-type(1){
+                            h3{
+                                font-size: 1.3rem;
+                            }
+                            .form-container{
+                                .send-form{
+                                    label.terms{
+                                        margin-bottom: 40px;
+                                    }
+                                }
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .credits{
+                    padding: 29px 40px;
+                }
+            }
+        }
+        @media screen and (max-width: $tablet){
+            #main-header{
+                height: 25rem;
+                .title{
+                    width: 85%;
+                    bottom: 40px;
+                    left: 50px;
+                    h1{
+                        font-size: 3.5rem;
+                        margin-bottom: 1rem;
+                        line-height: 3rem;
+                    }
+                    .sub-title{
+                        font-size: 1rem;
+                        line-height: 2rem;
+                    }
+                }
+                #navbar{
+                    .nav-menu{
+                        display: none;
+                    }
+                    #nav-hamburger{
+                        display: inline-block;
+                        width: 3rem;
+                        height: 3rem;
+                        fill: white;
+                    }
+                }
+            }
+            #main-page{
+                padding: 80px 30px;
+                .page-filters{
+                    @include flexBox(column, none, center);
+                    .filters{
+                        width: 80%;
+                        @include flexBox(column, none, center);
+                        form{
+                            width: 100%;
+                            &:nth-of-type(1){
+                                margin-right: 0;
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    }
+                }
+                .row{
+                    .event-card{
+                        width: 100%;
+                        height: 30rem;
+                        margin-bottom: 4rem;
+                        &:nth-last-of-type(1), &:nth-last-of-type(2){
+                            margin-bottom: 3rem;
+                        }
+                        .card-details{
+                            h3{
+                                font-size: 2rem;
+                            }
+                            span{
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: $mobile-xl){
+            #main-header{
+                height: 150px;
+                padding: 30px 50px;
+                .title{
+                    display: none;
+                }
+            }
+            #main-page{
+                padding: 50px 20px;
+                #card-slider{
+                    .description{
+                        padding-right: 50px;
+                    }
+                    .slider{
+                        .slide-container{
+                            height: 270px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .controllers{
+                        .indicator{
+                            width: 20px;
+                            height: 20px;
+                            .square{
+                                width: 8px;
+                                height: 8px;
+                            }
+                        }
+                    }
+                }
+                .row{
+                    .event-card{
+                        height: 20rem;
+                        .card-details{
+                            h3{
+                                font-size: 1.5rem;
+                            }
+                            span{
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            #main-footer{
+                .main-container{
+                    .sub-container{
+                        &:nth-last-of-type(1){
+                            h3{
+                                font-size: 1.2rem;
+                                line-height: 2rem;
+                                margin-bottom: 0;
+                            }
+                            .form-container{
+                                .send-form{
+                                    input[type=email]{
+                                        font-size: 1rem;
+                                        width: 100%;
+                                    }
+                                }
+                                .newsletter{
+                                    span{
+                                        font-size: 1rem;
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .credits{
+                    padding: 29px 30px;
+                }
+            }
+        }
+        @media screen and (max-width: $mobile-sm){
+            #main-page{
+                .row{
+                    .event-card{
+                        height: 15rem;
+                        .card-details{
+                            h3{
+                                font-size: 1.2rem;
+                            }
+                            span{
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }

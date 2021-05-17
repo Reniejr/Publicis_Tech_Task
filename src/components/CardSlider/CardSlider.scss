@@ -1,0 +1,97 @@
+@import '../../styles/main.scss';
+
+#card-slider{
+    background-color: $primary;
+    width: calc(100% + 160px);
+    margin-left: -80px;
+    margin-bottom: 110px;
+    padding: 120px 0;
+    padding-left: 80px;
+    .description{
+        position: relative;
+        color: white;
+        padding-right: 98px;
+        margin-bottom: 80px;
+        h2{
+            margin-bottom: 40px;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: -4%;
+        }
+        p{
+            max-width: 932px;
+            margin: 0;
+            font-size: 26px;
+            line-height: 36px;
+            color: rgba($color: white, $alpha: 0.5);
+        }
+        button{
+            position: absolute;
+            background-color: transparent;
+            font-size: 37px;
+            right: 98px;
+            top: 20px;
+            color: white;
+            border: none;
+            font-weight: 300;
+        }
+    }
+    .slider{
+        width: 100%;
+        overflow: hidden;
+        padding-right: 586px;
+        .slide-container{
+            @include flexBox(row, none, center);
+            @include transitions(all .3s ease);
+            position: relative;
+            width: 500%;
+            height: 653px;
+            margin-bottom: 42px;
+            .slide{
+                width: 1240px;
+                padding-right: 80px;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .controllers{
+        @include flexBox(row, none, center);
+        .indicator{
+            width: 60px;
+            height: 60px;
+            position: relative;
+            svg{
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .CircularProgressbar-path{
+                stroke: $secondary;
+                stroke-width: 2px;
+            }
+            .CircularProgressbar-trail{
+                stroke: transparent;
+            }
+            .square{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                -webkit-transform: translate(-50%, -50%) rotate(45deg);
+                -moz-transform: translate(-50%, -50%) rotate(45deg);
+                -ms-transform: translate(-50%, -50%) rotate(45deg);
+                -o-transform: translate(-50%, -50%) rotate(45deg);
+                width: 14px;
+                height: 14px;
+                background-color: white;
+            }
+        }
+        
+    }
+}

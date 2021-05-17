@@ -1,0 +1,32 @@
+@import '../../styles/main.scss';
+
+
+#main-header{
+    background-image: url('../../assets/banner.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 720px;
+    padding: 48px 80px;
+    color: white;
+    position: relative;
+    .title{
+        width: 45%;
+        position: absolute;
+        bottom: 80px;
+        left: 75px;
+        h1{
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 96px;
+            letter-spacing: -4%;
+            margin-bottom: 43px;
+            text-transform: uppercase;
+        }
+        .sub-title{
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 50px;
+            color: rgba($color: white, $alpha: 0.5);
+        }
+    }
+}
